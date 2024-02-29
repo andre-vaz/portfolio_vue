@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    min-width: 360px;
+    position: relative;
+    background-image: linear-gradient(to bottom, #04293A, #064663);
+    color: whitesmoke;
+    font-family: Roboto;
+    max-width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    background-image: linear-gradient(to bottom, #041C32, #04293A);
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-link {
+    text-decoration: none; 
+    transition: color 0.3s;
+    color: whitesmoke;
+    transition: 1.5s;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.nav-link:hover{
+    color: #ECB365;
+}
+
+.router-link-active{
+    color: #ECB365 !important;
+}
+
+.navbar-toggler{
+    color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 5%;
+    z-index: 20;
+}
+
+.box{
+    width: 100vw;
+    height: 100vh;
+    flex: 1;
+}
+
+.title{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.subtitle{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.icons{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icons:hover{
+    animation: jumpAnimation 1.5s infinite;
+}
+
+#github{
+    background-image: url("../images/github.svg");
+}
+
+#linkedin{
+    background-image: url("../images/linkedin.svg");
+}
+
+#cv{
+    background-image: url("../images/file-cv.svg");
+}
+
+#codemaster-link{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.skills-img img{
+    width: 100px;
+    height: 75px;
+    transition: 500ms;
+}
+
+.card{
+    width: 350px;
+    min-width: 350px;
+    height: 650px;
+    padding: 10px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex: 1; /* Allow the card body to grow to fill remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    margin-top: auto; /* Align the button to the bottom */
+}
+
+.card img{
+    height: 350px;
+    min-height: 350px;
+    border-radius: 10px;
+}
+
+.glass-card {
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust opacity as needed */
+    backdrop-filter: blur(10px); /* Adjust blur intensity as needed */
+    border-radius: 10px; /* Add border radius for a smoother look */
+    overflow: hidden; /* Ensure the background blur effect is contained within the card */
+    transition: 0.5s;
+}
+
+.glass-card:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.card-text{
+    font-size: 14px;
+    word-wrap: break-word !important;
+}
+
+.scrolling-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+}
+
+.scrolling-container .row {
+    display: inline-flex; /* Display cards in a single row */
+    flex-wrap: nowrap;
+}
+
+/* Track */
+::-webkit-scrollbar {
+    width: 5px; /* Set the width of the scrollbar */
+    height: 5px;
+    
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #041C32; /* Set the color of the scrollbar handle */
+    border-radius: 5px; /* Add rounded corners to the scrollbar handle */
+    cursor: pointer;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #04293A; /* Change the color of the scrollbar handle on hover */
+    cursor: grab;
+}
+
+.footer{
+    flex-shrink: 0;
+    background-color: transparent;
+}
+
+/* CSS Animations */
+
+@keyframes jumpAnimation {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Media Query */
+
+@media (max-width: 768px) {
+    #portfolio-section{
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+}
